@@ -53,7 +53,7 @@ if __name__ == '__main__':
     print("======================================================")
     print("Start training model")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    model.fit(X, y, epochs=5, validation_split=0.25)
+    model.fit(X, y, epochs=5, batch_size=128, validation_split=0.25)
 
     print("Finished training model")
     print("======================================================")
