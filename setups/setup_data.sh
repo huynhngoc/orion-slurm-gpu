@@ -1,11 +1,11 @@
 #!/bin/bash
 #SBATCH --ntasks=1               # 1 core(CPU)
 #SBATCH --nodes=1                # Use 1 node
-#SBATCH --job-name=cpu_tf
-#SBATCH --mem=8G
+#SBATCH --job-name=singularity
+#SBATCH --mem=4G
 #SBATCH --partition=smallmem
-#SBATCH --output=outputs/cpu-%A.out
-#SBATCH --error=outputs/cpu-%A.out
+#SBATCH --output=outputs/singularity-%A.out
+#SBATCH --error=outputs/singularity-%A.out
 
 # If you would like to use more please adjust this.
 
@@ -13,5 +13,4 @@
 # If you want to load module
 module load singularity
 
-# Run experiment
-singularity exec --nv tensorflow_gpu-ray.sif python experiment.py
+singularity exec --nv tensorflow_gpu.sif python scripts/setup_data.py

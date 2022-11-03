@@ -20,7 +20,7 @@ def generate_float(rand, sample_size, mean, std, noise_variance):
     return x
 
 if __name__ == '__main__':
-    sample_size = 100000
+    sample_size = 1000000
     noise_col_count = 130
     int_col_ratio = 0.25
     rand = np.random.RandomState(23)
@@ -89,11 +89,7 @@ if __name__ == '__main__':
     y += (x20 > 0).astype('float') * (x19 // 20) * (x20.clip(0, 200) // 20)
     y = (y > 5).astype('float')
 
-
     data = np.concatenate(noise_cols + data_cols, axis=-1)
 
-    print(data.shape)
-    print(y.sum())
-
-    np.save('X_data.npy', data)
-    np.save('y_data.npy', y)
+    np.save('data/X_data.npy', data)
+    np.save('data/y_data.npy', y)
