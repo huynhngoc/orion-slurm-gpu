@@ -13,7 +13,7 @@ if __name__ == '__main__':
     print("Loading data")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
-    X = np.load('data/X_data.npy')[:, -250:] # Less number of columns
+    X = np.load('data/X_data.npy')[:, -150:] # Less number of columns
     y = np.load('data/y_data.npy')
 
     print("Finished loading data")
