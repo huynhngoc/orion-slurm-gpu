@@ -19,6 +19,7 @@ class Data(Dataset):
 
   def __getitem__(self, index):
     return self.X[index], self.y[index]
+
   def __len__(self):
     return self.len
 
@@ -33,7 +34,7 @@ if __name__ == '__main__':
     y = np.load('data/y_data.npy')
 
     X_train, X_test, Y_train, Y_test = train_test_split(
-    X, Y, test_size=0.25, random_state=42)
+        X, y, test_size=0.25, random_state=42)
 
     traindata = Data(X_train, Y_train)
 
@@ -79,20 +80,21 @@ if __name__ == '__main__':
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     epochs = 5
     for epoch in range(epochs):
-    running_loss = 0.0
-    for i, data in enumerate(trainloader, 0):
-        inputs, labels = data
-        # set optimizer to zero grad to remove previous epoch gradients
-        optimizer.zero_grad()
-        # forward propagation
-        outputs = clf(inputs)
-        loss = criterion(outputs, labels)
-        # backward propagation
-        loss.backward()
-        # optimize
-        optimizer.step()
-        running_loss += loss.item()
-    # display statistics
-    print(f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / 2000:.5f}')
+        running_loss = 0.0
+        for i, data in enumerate(trainloader, 0):
+            inputs, labels = data
+            # set optimizer to zero grad to remove previous epoch gradients
+            optimizer.zero_grad()
+            # forward propagation
+            outputs = clf(inputs)
+            loss = criterion(outputs, labels)
+            # backward propagation
+            loss.backward()
+            # optimize
+            optimizer.step()
+            running_loss += loss.item()
+        # display statistics
+        print(f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / 2000:.5f}')
+
     print("Finished Training neural network")
     print("======================================================")
