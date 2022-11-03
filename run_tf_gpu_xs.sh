@@ -19,4 +19,4 @@ module load singularity
 nvidia-modprobe -u -c=0
 
 # Run experiment
-singularity exec --nv tensorflow_gpu.sif python scripts/run_tensorflow.py
+singularity exec --nv tensorflow_gpu.sif python scripts/run_tensorflow_xs.py
