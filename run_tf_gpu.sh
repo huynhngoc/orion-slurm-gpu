@@ -2,7 +2,7 @@
 #SBATCH --ntasks=1               # 1 core(CPU)
 #SBATCH --nodes=1                # Use 1 node
 #SBATCH --job-name=gpu_tf        # sensible name for the job
-#SBATCH --mem=8G                 # Default memory per CPU is 3GB.
+#SBATCH --mem=16G                 # Default memory per CPU is 3GB.
 #SBATCH --partition=gpu           # Must have - to use nodes containing the GPUs
 #SBATCH --gres=gpu:1              # Must have - to use the GPU in the node
 #SBATCH --output=outputs/gpu-%A.out
