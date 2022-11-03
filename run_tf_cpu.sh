@@ -14,4 +14,4 @@
 module load singularity
 
 # Run experiment
-singularity exec --nv tensorflow_gpu.sif python experiment.py
+singularity exec --nv tensorflow_gpu.sif python scripts/run_tensorflow.py
