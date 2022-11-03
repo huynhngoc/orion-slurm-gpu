@@ -13,5 +13,9 @@
 # If you want to load module
 module load singularity
 
-rm -f pytorch_gpu.sif
+if [ ! "pytorch_gpu.sif" ]
+  then
+  echo "Deleting old files"
+  rm -f pytorch_gpu.sif
+  fi
 singularity build --fakeroot pytorch_gpu.sif singularity/Singularity.PyTorch
