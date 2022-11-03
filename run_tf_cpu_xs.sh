@@ -4,8 +4,8 @@
 #SBATCH --job-name=cpu_tf
 #SBATCH --mem=16G
 #SBATCH --partition=smallmem
-#SBATCH --output=outputs/cpu-%A.out
-#SBATCH --error=outputs/cpu-%A.out
+#SBATCH --output=outputs/cpu-xs-%A.out
+#SBATCH --error=outputs/cpu-xs-%A.out
 
 # If you would like to use more please adjust this.
 

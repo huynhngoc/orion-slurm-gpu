@@ -5,8 +5,8 @@
 #SBATCH --mem=16G                 # Default memory per CPU is 3GB.
 #SBATCH --partition=gpu           # Must have - to use nodes containing the GPUs
 #SBATCH --gres=gpu:1              # Must have - to use the GPU in the node
-#SBATCH --output=outputs/gpu-%A.out
-#SBATCH --error=outputs/gpu-%A.out
+#SBATCH --output=outputs/gpu-xs-%A.out
+#SBATCH --error=outputs/gpu-xs-%A.out
 
 
 # If you would like to use more please adjust this.
