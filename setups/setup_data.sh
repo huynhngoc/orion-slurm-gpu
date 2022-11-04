@@ -2,8 +2,8 @@
 #SBATCH --ntasks=1               # 1 core(CPU)
 #SBATCH --nodes=1                # Use 1 node
 #SBATCH --job-name=data
-#SBATCH --mem=4G
-#SBATCH --partition=smallmem
+#SBATCH --mem=16G
+#SBATCH --partition=COURSE        # CHANGED - partition for the tutorial session
 #SBATCH --output=outputs/data-%A.out
 #SBATCH --error=outputs/data-%A.out
 

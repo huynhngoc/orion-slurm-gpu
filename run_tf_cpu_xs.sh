@@ -3,7 +3,7 @@
 #SBATCH --nodes=1                # Use 1 node
 #SBATCH --job-name=cpu_tf
 #SBATCH --mem=16G
-#SBATCH --partition=smallmem
+#SBATCH --partition=COURSE        # CHANGED - to use nodes containing the GPUs in the tutorial session
 #SBATCH --constraint=avx2
 #SBATCH --output=outputs/cpu-xs-%A.out
 #SBATCH --error=outputs/cpu-xs-%A.out
