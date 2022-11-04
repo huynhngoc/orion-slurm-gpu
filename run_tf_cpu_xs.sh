@@ -4,6 +4,7 @@
 #SBATCH --job-name=cpu_tf
 #SBATCH --mem=16G
 #SBATCH --partition=smallmem
+#SBATCH --constraint=avx2
 #SBATCH --output=outputs/cpu-xs-%A.out
 #SBATCH --error=outputs/cpu-xs-%A.out
 
