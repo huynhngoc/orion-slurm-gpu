@@ -15,7 +15,8 @@
 # If you want to load module
 module load CUDA/10.1.243-GCC-8.3.0
 module load Miniconda3
-conda activate $USER_gpu
+eval "$(conda shell.bash hook)"
+conda activate test_gpu
 
 python scripts/run_numba.py
 

@@ -13,4 +13,4 @@
 module load Miniconda3
 
 # create the environment
-conda create --name $USER_gpu python=3.7 numpy ipython numba cudatoolkit
+conda create --name test_gpu -c conda python=3.7 numpy ipython numba cudatoolkit
