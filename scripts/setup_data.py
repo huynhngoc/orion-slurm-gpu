@@ -20,7 +20,7 @@ def generate_float(rand, sample_size, mean, std, noise_variance):
     return x
 
 if __name__ == '__main__':
-    sample_size = 1000000
+    sample_size = 100000
     noise_col_count = 700
     int_col_ratio = 0.25
     rand = np.random.RandomState(23)
