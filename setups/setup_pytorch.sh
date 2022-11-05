@@ -3,7 +3,7 @@
 #SBATCH --nodes=1                # Use 1 node
 #SBATCH --job-name=singularity
 #SBATCH --mem=12G
-#SBATCH --partition=COURSE        # CHANGED - partition for the tutorial session
+#SBATCH --partition=smallmem
 #SBATCH --output=outputs/singularity-%A.out
 #SBATCH --error=outputs/singularity-%A.out
 
