@@ -26,7 +26,7 @@ if __name__ == '__main__':
     inputs = tf.keras.Input(shape=(X.shape[1],))
 
     layers = []
-    for _ in range(3):
+    for _ in range(20):
         d1 = tf.keras.layers.Dense(32, activation='swish')(inputs)
         d2 = tf.keras.layers.Dense(16, activation='swish')(d1)
 
@@ -42,11 +42,13 @@ if __name__ == '__main__':
         layers.append(d10)
 
     concat_layer = tf.keras.layers.Concatenate()(layers)
-    c1 = tf.keras.layers.Dense(32, activation='swish')(concat_layer)
-    c2 = tf.keras.layers.Dense(16, activation='swish')(c1)
-    c3 = tf.keras.layers.Dense(8, activation='swish')(c2)
+    c1 = tf.keras.layers.Dense(1024, activation='swish')(concat_layer)
+    c2 = tf.keras.layers.Dense(256, activation='swish')(c1)
+    c3 = tf.keras.layers.Dense(64, activation='swish')(c2)
+    c4 = tf.keras.layers.Dense(32, activation='swish')(c3)
+    c5 = tf.keras.layers.Dense(8, activation='swish')(c4)
 
-    outputs = tf.keras.layers.Dense(1, activation='sigmoid')(c3)
+    outputs = tf.keras.layers.Dense(1, activation='sigmoid')(c5)
 
     model = tf.keras.Model(inputs=inputs, outputs=outputs)
 
