@@ -2,7 +2,7 @@
 #SBATCH --ntasks=1               # 1 core(CPU)
 #SBATCH --nodes=1                # Use 1 node
 #SBATCH --job-name=singularity
-#SBATCH --mem=4G
+#SBATCH --mem=12G
 #SBATCH --partition=COURSE        # CHANGED - partition for the tutorial session
 #SBATCH --output=outputs/singularity-%A.out
 #SBATCH --error=outputs/singularity-%A.out

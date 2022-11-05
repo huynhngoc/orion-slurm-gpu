@@ -17,6 +17,6 @@ module load CUDA/10.1.243-GCC-8.3.0
 module load Anaconda3
 conda activate $USER_gpu
 
-python scripts/run_tensorflow_xs.py
+python scripts/run_numba.py
 
 conda deactivate
