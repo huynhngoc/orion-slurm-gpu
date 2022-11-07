@@ -3,7 +3,7 @@
 #SBATCH --nodes=1                # Use 1 node
 #SBATCH --job-name=data
 #SBATCH --mem=16G
-#SBATCH --partition=COURSE        # CHANGED - partition for the tutorial session
+#SBATCH --partition=COURSE-CPU    # CHANGED - partition for the tutorial session
 #SBATCH --output=outputs/data-%A.out
 #SBATCH --error=outputs/data-%A.out
 

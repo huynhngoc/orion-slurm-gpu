@@ -3,7 +3,7 @@
 #SBATCH --nodes=1                 # Use 1 node
 #SBATCH --job-name=numba          # sensible name for the job
 #SBATCH --mem=2G                  # Default memory per CPU is 3GB.
-#SBATCH --partition=COURSE        # CHANGED - to use nodes containing the GPUs in the tutorial session
+#SBATCH --partition=COURSE-GPU    # CHANGED - to use nodes containing the GPUs in the tutorial session
 #SBATCH --gres=gpu:1              # Must have - to use the GPU in the node
 #SBATCH --output=outputs/numba-%A.out
 #SBATCH --error=outputs/numba-%A.out

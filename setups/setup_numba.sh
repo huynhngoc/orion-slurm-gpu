@@ -3,7 +3,7 @@
 #SBATCH --nodes=1                # Use 1 node
 #SBATCH --job-name=conda_install
 #SBATCH --mem=4G
-#SBATCH --partition=COURSE        # CHANGED - partition for the tutorial session
+#SBATCH --partition=COURSE-CPU    # CHANGED - partition for the tutorial session
 #SBATCH --output=outputs/conda-%A.out
 #SBATCH --error=outputs/conda-%A.out
 
